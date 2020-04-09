@@ -13,4 +13,4 @@ Examples:
 
 | Login                     | Pwd        | LoginLink     | 
 | wajihwerghi3@gmail.com    | test123    | linkedinlogin |
-| wajihwerghi@gmail.com     | 21290529   | linkedinlogin | 
+| wajihwerghi2@gmail.com    | test1234   | linkedinlogin | 

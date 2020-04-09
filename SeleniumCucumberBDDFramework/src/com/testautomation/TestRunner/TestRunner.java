@@ -14,7 +14,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions (
         features = "./features/"
         ,glue = {"com.testautomation.StepDef"}
-        ,tags = {"@DataDrivenTesting"},plugin= {"pretty",
+        ,tags = {"@TestDataReading"},plugin= {"pretty",
         		"html:target/site/cucumber-pretty",
         		"json:target/cucumber-json"}
         ,monochrome = true)

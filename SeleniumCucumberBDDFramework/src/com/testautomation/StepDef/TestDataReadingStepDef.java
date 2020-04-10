@@ -33,15 +33,13 @@ public class TestDataReadingStepDef {
 	@When("^Read test data for skill two$")
 	public void read_test_data_for_skill_two() throws Throwable
 	{
-		Map<String,String> testDataInMap=testdata.getTestDataInMap();
-		System.out.println(testDataInMap.get("Skill_2"));
+		
 	}
 
 	@Then("^Read test data for skill Three$")
 	public void read_test_data_for_skill_Three() throws Throwable 
 	{
-		Map<String,String> testDataInMap=testdata.getTestDataInMap();
-		System.out.println(testDataInMap.get("Skill_3"));
+		
 		
 	}
 	

@@ -6,4 +6,7 @@
       <class name="com.testautomation.TestRunner.TestRunner"/>
     </classes>
   </test> <!-- Test -->
+  <listeners>
+  <listener class-name="com.testautomation.Listeners.ITestListenerImpl"></listener>
+  </listeners>>
 </suite> <!-- Suite -->

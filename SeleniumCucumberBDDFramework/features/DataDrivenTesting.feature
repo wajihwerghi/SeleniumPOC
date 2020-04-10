@@ -1,4 +1,4 @@
-@DataDrivenTesting
+@ExtendReport
 Feature: Linkedin Login Validation
 
 

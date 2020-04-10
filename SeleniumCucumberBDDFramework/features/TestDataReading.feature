@@ -1,5 +1,5 @@
 @TestDataReading
-Feature: Test Data Reading for the test cases
+Feature: Test Data 
 
 
 Scenario: Test Data Reading for the test cases

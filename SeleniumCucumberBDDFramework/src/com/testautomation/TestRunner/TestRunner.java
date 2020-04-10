@@ -14,10 +14,11 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions (
         features = "./features/"
         ,glue = {"com.testautomation.StepDef"}
-        ,tags = {"@TestDataReading"},plugin= {"pretty",
-        		"html:target/site/cucumber-pretty",
-        		"json:target/cucumber-json"}
-        ,monochrome = true)
+        ,tags = {"@ExtendReport"})
+//,plugin= {"pretty",
+//        		"html:target/site/cucumber-pretty",
+//        		"json:target/cucumber-json"}
+//        ,monochrome = true)
 public class TestRunner {
     private TestNGCucumberRunner testNGCucumberRunner;
     

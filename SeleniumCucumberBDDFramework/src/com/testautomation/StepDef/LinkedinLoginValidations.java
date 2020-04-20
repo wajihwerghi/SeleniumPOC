@@ -37,6 +37,7 @@ public class LinkedinLoginValidations extends ExtentReportListener {
 			
 			driver = BrowserUtility.OpenBrowser(driver, properties.getProperty("browser.name"),properties.getProperty("browser.baseURL"));
 			logInfo.pass("Opened chrome browser and entred URL");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
 		} catch (AssertionError | Exception e) {
 			testStepHandle("FAIL",driver,logInfo,e);			
@@ -55,6 +56,7 @@ public class LinkedinLoginValidations extends ExtentReportListener {
 			new GoogleSearchPage(driver).NavigateToResultPage(LoginLink);
 			
 			logInfo.pass("Searching LoginLink");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
 		} catch (AssertionError | Exception e) {
 			testStepHandle("FAIL",driver,logInfo,e);			
@@ -72,6 +74,7 @@ public class LinkedinLoginValidations extends ExtentReportListener {
 			new GoogleResultPage(driver).NavigateToLinkedinLoginPage();
 			
 			logInfo.pass("clicked on Link");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 		
 		} catch (AssertionError | Exception e) {
 			testStepHandle("FAIL",driver,logInfo,e);			
@@ -91,6 +94,7 @@ public class LinkedinLoginValidations extends ExtentReportListener {
 //		    String expectedChannelName="(1) LinkedIn";
 //		    String actualChannelName=new LinkedinLoginPage(driver).getTitle();
 			logInfo.pass("saisi Login and Password");
+			logInfo.addScreenCaptureFromPath(captureScreenShot(driver));
 			driver.quit();
 		
 		} catch (AssertionError | Exception e) {

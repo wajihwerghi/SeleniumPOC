@@ -14,7 +14,7 @@ import cucumber.api.testng.TestNGCucumberRunner;
 @CucumberOptions (
         features = "./features/"
         ,glue = {"com.testautomation.StepDef"}
-        ,tags = {"@ExtendReport"})
+        ,tags = {"@Orange"})
 //,plugin= {"pretty",
 //        		"html:target/site/cucumber-pretty",
 //        		"json:target/cucumber-json"}

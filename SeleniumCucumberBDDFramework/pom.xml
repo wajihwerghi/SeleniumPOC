@@ -6,34 +6,34 @@
   <name>SeleniumCucumberBDDFramework</name>
   <description>SeleniumCucumberBDDFramework</description>
   
-  <properties>
+<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 	<build>
 		<plugins>
 	<plugin>
+		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
-		<version>3.1</version>
+		<version>3.7.0</version>
 		<configuration>
-			<fork>true</fork>
-			<executable>C:\Program Files\Java\jdk1.8.0_241\bin\javac.exe</executable>
-			
+			<source>1.8</source>
+			<target>1.8</target>
+			<encoding>UTF-8</encoding>
 		</configuration>
 	</plugin>
 
 	<plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-surefire-plugin</artifactId>
-		<version>3.7.0</version> 
+		<version>3.0.0-M1</version>		<!--<version>3.7.0</version> -->
 		<configuration>
 			<suiteXmlFiles>
-				<suiteXmlFile>testng.xml</suiteXmlFile>				
-			</suiteXmlFiles>
-			<skipTests>true</skipTests>			
+				<suiteXmlFile>${SuiteXmlFile}</suiteXmlFile>				
+			</suiteXmlFiles>		
 		</configuration>
 	</plugin>
 			
-			<plugin>
+			<!-- <plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
 				<version>3.15.0</version>
@@ -50,7 +50,7 @@
 						</configuration>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 		</plugins>
 	</build>
 	<dependencies>
@@ -86,11 +86,11 @@
 			<version>2.3.0</version>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-picocontainer</artifactId>
 			<version>1.2.5</version>
-		</dependency>
+		</dependency> -->
 
 		<dependency>
 			<groupId>com.googlecode.json-simple</groupId>
@@ -114,33 +114,33 @@
 		<dependency>
 			<groupId>org.testng</groupId>
 			<artifactId>testng</artifactId>
-			<version>6.9.8</version>
+			<version>6.14.3</version>
 			<scope>compile</scope>
 		</dependency>
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-testng</artifactId>
 			<version>1.2.5</version>
-		</dependency> 
+		</dependency> -->
 
-		<dependency>
+		<!-- <dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-java</artifactId>
 			<version>1.2.2</version>
-		</dependency> 
+		</dependency> -->
 
-		<dependency>
+	<!-- 	<dependency>
 			<groupId>info.cukes</groupId>
 			<artifactId>cucumber-jvm-deps</artifactId>
 			<version>1.0.5</version>
 			<scope>provided</scope>
 		</dependency>
- 
+ -->
 		<dependency>
 			<groupId>com.codoid.products</groupId>
 			<artifactId>fillo</artifactId>
-			<version>1.18</version>
+			<version>1.16</version>
 		</dependency>
 
 		<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->

@@ -19,19 +19,39 @@ public class OrangeLoginPage {
 	@FindBy(how=How.ID,using="txtPassword")
 	public WebElement Password;
 	
-	@FindBy(how=How.XPATH,using="btnLogin")
+	@FindBy(how=How.ID,using="btnLogin")
 	public WebElement LoginButton;
 	
-	@FindBy(how=How.LINK_TEXT,using="Mot de passe oublié?")
+	@FindBy(how=How.LINK_TEXT,using="Forgot your password?")
 	public WebElement ForgotPassword;
 	
+	@FindBy(how=How.ID,using="logInPanelHeading")
+	public WebElement LoginPanel;
 	
-	public void NavigateToHomePage(String LoginO , String PwdO) {
+	
+	public void SaisirMotDePasse(String User , String Pwd)  {
 		
-		UserName.sendKeys(LoginO);
-		Password.sendKeys(PwdO);
-		LoginButton.click();
+		UserName.sendKeys(User);
+		Password.sendKeys(Pwd);
 	
 	}
+	
+	  public void  ClickSurLeButton()  {
+		
+		LoginButton.click();
+	
+	} 
+	  
+	  public String getTitle() throws Exception
+		{
+			Thread.sleep(2000);
+			return driver.getTitle();
+		}
+	  
+	  public String linkText() {
+		  
+		  return LoginPanel.getText();
+		  
+	  }
 
 }

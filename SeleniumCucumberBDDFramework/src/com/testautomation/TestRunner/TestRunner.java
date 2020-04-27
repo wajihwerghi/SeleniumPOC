@@ -8,13 +8,14 @@ import org.testng.annotations.Test;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.testng.CucumberFeatureWrapper;
+import cucumber.api.testng.PickleEventWrapper;
 import cucumber.api.testng.TestNGCucumberRunner;
 
 
 @CucumberOptions (
-        features = "./features/"
+        features = "./features/orange/"
         ,glue = {"com.testautomation.StepDef"}
-        ,tags = {"@Orange"})
+        ,tags = {"@ParallelOrange1"})
 //,plugin= {"pretty",
 //        		"html:target/site/cucumber-pretty",
 //        		"json:target/cucumber-json"}
@@ -28,15 +29,15 @@ public class TestRunner {
     }
 
     @Test(dataProvider = "features")    
-    public void feature(CucumberFeatureWrapper cucumberFeature) {
-    	testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
-//    	testNGCucumberRunner.runScenario(eventwrapper.getPickleEvent());
+    public void feature(PickleEventWrapper eventwrapper,CucumberFeatureWrapper cucumberFeature) throws Throwable {
+    	//testNGCucumberRunner.runCucumber(cucumberFeature.getCucumberFeature());
+    	testNGCucumberRunner.runScenario(eventwrapper.getPickleEvent());
     }
     
     @DataProvider//(parallel=true)
     public Object[][] features() {
-       return testNGCucumberRunner.provideFeatures();    	
-//    	 return testNGCucumberRunner.provideScenarios();
+       // return testNGCucumberRunner.provideFeatures();    	
+    	 return testNGCucumberRunner.provideScenarios();
     }
     
     @AfterClass(alwaysRun = true)
